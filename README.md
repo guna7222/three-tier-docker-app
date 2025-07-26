@@ -1,7 +1,8 @@
 # three-tier-docker-app
 
-docker compose up --build \n
-docker compose down
+** docker compose up --build **
+
+** docker compose down **
 
 | Command                          | What it does                   |
 | -------------------------------- | ------------------------------ |
