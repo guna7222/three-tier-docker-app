@@ -1,11 +1,6 @@
-FROM python:3.9
-
-# Install netcat (specifically netcat-openbsd)
-RUN apt-get update && apt-get install -y netcat-openbsd
-
+FROM python:3.10
 WORKDIR /app
 COPY requirements.txt .
-RUN pip install -r requirements.txt
+RUN pip install --no-cache-dir -r requirements.txt
 COPY . .
-
-CMD ["sh", "wait_for_db.sh"]
+CMD ["python", "app.py"]
